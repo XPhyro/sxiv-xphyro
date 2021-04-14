@@ -408,6 +408,9 @@ bool img_fit(img_t *img)
 		case SCALE_HEIGHT:
 			z = zh;
 			break;
+		case SCALE_FILL:
+			z = MAX(zw, zh);
+			break;
 		default:
 			z = MIN(zw, zh);
 			break;
